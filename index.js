@@ -1,5 +1,7 @@
 let filmList = document.querySelector("#filmList")
 let filmQuery = document.querySelector("#filmQuery")
+let selectedFilm = ""
+let reviews = {}
 
 const appendFilmList = (arr) =>{
     arr.forEach(el=>{
@@ -21,5 +23,15 @@ const fetchMovieList = async ()=>{
     }
 }
 
+const fetchMovieInfo = (url)=>{
+
+}
+
 fetchMovieList()
-movieInfo()
+
+filmList.addEventListener("change",() =>{
+    selectedFilm = filmList.value
+    
+})
+
+fetchMovieInfo()
